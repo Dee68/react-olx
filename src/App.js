@@ -6,6 +6,22 @@ import { useEffect } from "react";
 import DispatchContext from "./context/DispatchContext";
 import StateContext from "./context/StateContext";
 import Home from "./pages/Home";
+import Activate from "./pages/Activate";
+import Login from "./pages/Login";
+import ResetPassword from "./pages/ResetPassword";
+import ResetPasswordDone from "./pages/ResetPasswordDone";
+import ResetPasswordConfirm from "./pages/ResetPasswordConfirm";
+import CreationInfo from "./pages/CreationInfo";
+import Register from "./pages/Register";
+import Profile from "./pages/Profile";
+import Listing from "./pages/Listing";
+import AddProduct from "./pages/AddProduct";
+import Users from "./pages/Users";
+import UserDetail from "./pages/UserDetail";
+import ProductDetail from "./pages/ProductDetail";
+import WishList from "./pages/WishList";
+import SearchItem from "./pages/SearchItem";
+import ProductsCategory from "./pages/ProductsCategory";
 
 function App() {
   const initialState = {
@@ -59,34 +75,34 @@ function App() {
           <Layout />
           <Routes>
             <Route exact path="/" Component={Home} />
-            {/* <Route exact path="/register" Component={Register} />
-          <Route exact path="/activate/:uid/:token" Component={Activate} />
-          <Route exact path="/login" Component={Login} />
-          <Route exact path="/reset-password" Component={ResetPassword} />
-          <Route
-            exact
-            path="/reset-password/done"
-            Component={ResetPasswordDone}
-          />
-          <Route exact path="/profile" Component={Profile} />
-          <Route exact path="/created" Component={CreationInfo} />
-          <Route exact path="/listing/:id" Component={Listing} />
-          <Route exact path="/users" Component={Users} />
-          <Route exact path="/users/:id" Component={UserDetail} />
-          <Route exact path="/add-product" Component={AddProduct} />
-          <Route exact path="/products/:id" Component={ProductDetail} />
-          <Route exact path="/user/:id/wishlist/" Component={WishList} />
-          <Route exact path="/search/:county/" Component={SearchItem} />
-          <Route
-            exact
-            path="/product/:category/"
-            Component={ProductsCategory}
-          />
-          <Route
-            exact
-            path="/password/reset/confirm/:uid/:token"
-            Component={ResetPasswordConfirm}
-          /> */}
+            <Route exact path="/register" Component={Register} />
+            <Route exact path="/activate/:uid/:token" Component={Activate} />
+            <Route exact path="/login" Component={Login} />
+            <Route exact path="/reset-password" Component={ResetPassword} />
+            <Route
+              exact
+              path="/reset-password/done"
+              Component={ResetPasswordDone}
+            />
+            <Route exact path="/profile" Component={Profile} />
+            <Route exact path="/created" Component={CreationInfo} />
+            <Route exact path="/listing/:id" Component={Listing} />
+            <Route exact path="/users" Component={Users} />
+            <Route exact path="/users/:id" Component={UserDetail} />
+            <Route exact path="/add-product" Component={AddProduct} />
+            <Route exact path="/products/:id" Component={ProductDetail} />
+            <Route exact path="/user/:id/wishlist/" Component={WishList} />
+            <Route exact path="/search/:county/" Component={SearchItem} />
+            <Route
+              exact
+              path="/product/:category/"
+              Component={ProductsCategory}
+            />
+            <Route
+              exact
+              path="/password/reset/confirm/:uid/:token"
+              Component={ResetPasswordConfirm}
+            />
           </Routes>
         </Router>
       </DispatchContext.Provider>
